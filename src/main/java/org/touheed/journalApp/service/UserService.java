@@ -35,7 +35,7 @@ public class UserService {
 
 
     public User saveUser(User user){
-        user.setRoles(Arrays.asList("USER"));
+        user.setRoles("USER");
         User exists = userRepo.findByUserName(user.getUserName());
         if (exists != null){
             throw new RuntimeException("User is Already Exists");
@@ -45,7 +45,7 @@ public class UserService {
     }
 
     public ResponseEntity<Object> saveAdminUser(User user){
-        user.setRoles(Arrays.asList("ADMIN","USER"));
+        user.setRoles("ADMIN,USER");
         User exists = userRepo.findByUserName(user.getUserName());
         if (exists != null){
             log.info("User is Already Exists");

@@ -27,7 +27,8 @@ public class User {
     private String userName;
     @NotNull
     private String password;
-    private List<String> roles;
+    @Lob
+    private String roles;
 
     @JsonManagedReference
 //    @JsonIgnore

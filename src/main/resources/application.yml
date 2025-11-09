@@ -14,3 +14,10 @@ spring:
     active: dev
 abc:
   test: "this is for Testing from yaml"
+
+logging:
+  level:
+    org:
+      touheed:
+        journalApp: DEBUG
+
